@@ -2,12 +2,6 @@
   "name": "playground-canvas-balls",
   "version": "1.0.0",
   "license": "ISC",
-  "devDependencies": {
-    "eslint": "^4.19.1"
-  },
-  "dependencies": {
-    "parcel-bundler": "^1.7.0"
-  },
   "scripts": {
     "lint-init": "./node_modules/.bin/eslint --init",
 
