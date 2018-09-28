@@ -45,7 +45,7 @@ export default class {
   /** Animate the canvas and the projectiles created */
   animate() {
     const COLLISION = .9;
-    const GRAVITY   = .5;
+    const GRAVITY   = .8;
     const { canvas: CANVAS } = this;
 
     window.requestAnimationFrame(() => {
