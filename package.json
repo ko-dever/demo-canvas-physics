@@ -7,8 +7,8 @@
   },
   "scripts": {
     "clear": "npm run clear:cache & npm run clear:dist",
-    "clear:cache": "rm -rf .cache/",
-    "clear:dist": "rm -rf dist/",
+    "clear:cache": "shx rm -rf .cache/",
+    "clear:dist": "shx rm -rf dist/",
 
     "lint": "npx eslint $npm_package_config_DIR_SRC/*.js",
 
@@ -22,6 +22,7 @@
     "parcel-bundler": "^1.10.1"
   },
   "devDependencies": {
-    "eslint": "^5.6.1"
+    "eslint": "^5.6.1",
+    "shx": "^0.3.2"
   }
 }
