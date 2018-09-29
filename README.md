@@ -2,6 +2,8 @@
 
 This repository is just a technical demonstration involving a canvas, balls, and some physics to play with.
 
+See the project online : https://demo-canvas-balls.surge.sh
+
 
 # Requirements
 
