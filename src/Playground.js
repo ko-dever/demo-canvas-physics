@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Generates a random color in hexadecimal format
  *

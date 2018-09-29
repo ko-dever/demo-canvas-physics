@@ -3,7 +3,7 @@
 import Playground from './Playground';
 
 
-;(( doc ) => {
+(( doc ) => {
 
   let CANVAS;
 
