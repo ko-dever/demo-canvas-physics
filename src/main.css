@@ -65,7 +65,7 @@ header :first-child {
 }
 
 header :last-child {
-    padding-bottom: var(--headerPadding);
+    padding: var(--headerPadding) 0;
 
     -webkit-border-bottom-left-radius: var(--headerRadius);
        -moz-border-bottom-left-radius: var(--headerRadius);
