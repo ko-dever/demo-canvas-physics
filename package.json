@@ -2,17 +2,21 @@
   "name": "technical-demo-canvas-balls",
   "version": "1.0.0",
   "license": "ISC",
+  "config": {
+    "DIR_SRC": "./src"
+  },
   "scripts": {
     "clear": "npm run clear:cache & npm run clear:dist",
     "clear:cache": "rm -rf .cache/",
     "clear:dist": "rm -rf dist/",
 
-    "lint-init": "npx eslint --init",
+    "lint": "npx eslint $npm_package_config_DIR_SRC/*.js",
 
-    "dev": "npx parcel ./src/index.html --open",
+    "dev": "npx parcel $npm_package_config_DIR_SRC/index.html --open",
 
-    "prebuild": "npm run clear",
-    "build": "npx parcel build ./src/index.html --public-url ./ --no-cache"
+    "prebuild": "npm run lint && npm run clear",
+    "build": "npx parcel build $npm_package_config_DIR_SRC/index.html --detailed-report",
+    "build:local": "npm run build -- --public-url ./"
   },
   "dependencies": {
     "parcel-bundler": "^1.10.1"
