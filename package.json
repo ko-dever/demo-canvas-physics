@@ -3,26 +3,33 @@
   "version": "1.0.0",
   "license": "ISC",
   "config": {
-    "DIR_SRC": "./src"
+    "DIR_SRC": "./src",
+    "DIR_BUILD": "./dist",
+    "DEPLOY_DOMAIN": "demo-canvas-balls.surge.sh"
   },
   "scripts": {
     "clear": "npm run clear:cache & npm run clear:dist",
     "clear:cache": "shx rm -rf .cache/",
-    "clear:dist": "shx rm -rf dist/",
+    "clear:dist": "shx rm -rf $npm_package_config_DIR_BUILD",
 
     "lint": "npx eslint $npm_package_config_DIR_SRC/*.js",
 
     "dev": "npx parcel $npm_package_config_DIR_SRC/index.html --open",
 
     "prebuild": "npm run lint && npm run clear",
-    "build": "npx parcel build $npm_package_config_DIR_SRC/index.html --detailed-report",
-    "build:local": "npm run build -- --public-url ./"
+    "build": "npm run build:default -- --out-dir $npm_package_config_DIR_BUILD --detailed-report",
+    "build:default": "npx parcel build $npm_package_config_DIR_SRC/index.html",
+    "build:local": "npm run build -- --public-url ./",
+
+    "predeploy": "npm run build",
+    "deploy": "npx surge $npm_package_config_DIR_BUILD $npm_package_config_DEPLOY_DOMAIN"
   },
   "dependencies": {
     "parcel-bundler": "^1.10.1"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
-    "shx": "^0.3.2"
+    "shx": "^0.3.2",
+    "surge": "^0.20.1"
   }
 }
