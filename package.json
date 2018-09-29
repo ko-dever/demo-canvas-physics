@@ -7,6 +7,11 @@
     "DIR_BUILD": "./dist",
     "DEPLOY_DOMAIN": "demo-canvas-balls.surge.sh"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "echo ''; if git-branch-is master; then npm run deploy; fi; echo ''"
+    }
+  },
   "scripts": {
     "clear": "npm run clear:cache & npm run clear:dist",
     "clear:cache": "shx rm -rf .cache/",
@@ -29,6 +34,8 @@
   },
   "devDependencies": {
     "eslint": "^5.6.1",
+    "git-branch-is": "^2.1.0",
+    "husky": "^1.0.1",
     "shx": "^0.3.2",
     "surge": "^0.20.1"
   }
