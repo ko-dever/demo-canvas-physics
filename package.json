@@ -19,6 +19,7 @@
 
     "lint": "npx eslint $npm_package_config_DIR_SRC/*.js",
 
+    "predev": "npm run lint && npm run clear",
     "dev": "npx parcel $npm_package_config_DIR_SRC/index.html --open",
 
     "prebuild": "npm run lint && npm run clear",
