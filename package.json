@@ -9,7 +9,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "echo ''; if git-branch-is master; then npm run deploy; fi; echo ''"
+      "_noop_pre-push": "echo ''; if git-branch-is master; then npm run deploy; fi; echo ''"
     }
   },
   "scripts": {
@@ -29,7 +29,9 @@
 
     "predeploy": "npm run build",
     "deploy": "npx surge $npm_package_config_DIR_BUILD $npm_package_config_DEPLOY_DOMAIN",
-    "postdeploy": "npm run clear"
+    "postdeploy": "npm run clear",
+
+    "_noop_": ""
   },
   "devDependencies": {
     "eslint": "^5.6.1",
