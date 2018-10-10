@@ -19,13 +19,19 @@
 # `./<this_file>`
 
 
-# Make sure this file exists
+# Path of the custom hook file
 PATH_CUSTOM_HOOK='../../my-git-hooks/pre-push.sh'
 
 
 # Enter git hooks folder
-# The path is relative to this current file
+#
+# All operations using the custom hook file must be done after having
+# accessed this folder because the path is relative to this one.
 cd ../.git/hooks/
+
+
+# Make sure the custom hook file exists
+touch $PATH_CUSTOM_HOOK
 
 
 # Create the symbolic link **from here**
