@@ -20,6 +20,59 @@ html, body {
 
 
 /* --------------------------------------------------
+ *		Link for the source code
+ * -------------------------------------------------- */
+
+ .link-repo {
+    --cornerLabSize: 87px;
+    --rotateDeg: -45deg;
+
+    position: absolute;
+    top : 0; left: 0;
+
+    width : var( --cornerLabSize );
+    height: var( --cornerLabSize );
+
+    background-color: rgb( 219, 219, 219 );
+    color: inherit;
+    overflow: hidden;
+    text-decoration: none;
+
+    /* Show only a specific part of the element (as it renders as a square) */
+    -webkit-clip-path: polygon(
+        var( --cornerLabSize ) 0,
+        0 var( --cornerLabSize ), 0 0
+    );
+    clip-path: polygon(
+        var( --cornerLabSize ) 0,
+        0 var( --cornerLabSize ), 0 0
+    );
+}
+
+.link-repo-ico {
+    /* transform: rotate( var( --rotateDeg ) ); */
+    position: absolute;
+    top  : 3px;
+    left : 7px;
+    height: 35px;
+}
+
+.link-repo-text {
+    display: inline-block;
+
+    transform: rotate( var( --rotateDeg ) );
+    transform-origin: 0;
+    margin-top : 58px;
+    margin-left: 7px;
+
+    letter-spacing: 1px;
+    text-align    : center;
+    white-space   : nowrap;
+}
+
+
+
+/* --------------------------------------------------
  * Header section
  * -------------------------------------------------- */
 

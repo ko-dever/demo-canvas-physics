@@ -7,6 +7,7 @@
 
 # misc
 .DS_Store
+/resources
 
 npm-debug.log*
 yarn-debug.log*
