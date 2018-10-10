@@ -1,9 +1,3 @@
-:root {
-    --headerRadius : 12px;
-    --headerPadding: 5px;
-}
-
-
 /* box-sizing better approach */
 /* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
@@ -29,51 +23,37 @@ html, body {
  * Header section
  * -------------------------------------------------- */
 
- header {
+header {
     position: absolute;
     top: 30px;
 
-    /* center elemnt without a fixed width */
+    /* center element without a fixed width */
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
 
+    padding: 5px 10px;
+
+    background-color: rgba( 219, 219, 219, .5 );
+    overflow: hidden;
     text-align: center;
 
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+
+    -webkit-border-radius: 7px;
+       -moz-border-radius: 7px;
+            border-radius: 7px;
 }
 
 header * {
-    margin : 0;
-    padding: 0 10px;
-    background-color: rgba(219, 219, 219, 0.473);
-}
-
-header :first-child {
-    padding-top: var(--headerPadding);
-
-    -webkit-border-top-left-radius: var(--headerRadius);
-       -moz-border-top-left-radius: var(--headerRadius);
-            border-top-left-radius: var(--headerRadius);
-
-    -webkit-border-top-right-radius: var(--headerRadius);
-       -moz-border-top-right-radius: var(--headerRadius);
-            border-top-right-radius: var(--headerRadius);
+    margin: 0;
 }
 
 header :last-child {
-    padding: var(--headerPadding) 0;
-
-    -webkit-border-bottom-left-radius: var(--headerRadius);
-       -moz-border-bottom-left-radius: var(--headerRadius);
-            border-bottom-left-radius: var(--headerRadius);
-
-    -webkit-border-bottom-right-radius: var(--headerRadius);
-       -moz-border-bottom-right-radius: var(--headerRadius);
-            border-bottom-right-radius: var(--headerRadius);
+    padding-top: 5px;
 }
 
 
