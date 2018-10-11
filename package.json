@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "ISC",
   "config": {
-    "DIR_SRC": "./src",
+    "DIR_SRC": "./web",
     "DIR_BUILD": "./dist",
     "DEPLOY_DOMAIN": "demo-canvas-balls.surge.sh"
   },
