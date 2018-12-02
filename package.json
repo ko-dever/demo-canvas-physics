@@ -5,7 +5,7 @@
   "config": {
     "DIR_SRC": "./web",
     "DIR_BUILD": "./dist",
-    "DEPLOY_DOMAIN": "demo-canvas-balls.surge.sh"
+    "DEPLOY_DOMAIN": "demo-canvas-physics.surge.sh"
   },
   "scripts": {
     "clear": "npm run clear:cache & npm run clear:dist",
